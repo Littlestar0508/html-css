@@ -7,24 +7,45 @@
   </head>
   <body>
     <!-- Fragment 식별자 방식으로 name속성으로 위치 지정하기 -->
-    <a id="start"></a>
+    <a name="start"></a>
     <h1 id="heading">하이퍼링크 요소</h1>
     <!-- 웹사이트(URL)로 하이퍼링크 : 절대경로 -->
     <!-- target의 default는 _self -->
-    <a href="https://likelion.net/school">태킷 프론트엔드 스쿨(부트캠프)</a>
-    <hr />
+    <p>
+      <a href="https://likelion.net/school">태킷 프론트엔드 스쿨(부트캠프)</a>
+    </p>
     <!-- target 속성의 값으로 _blank를 지정하면 새창, 새탭에서 링크 결과 보기 -->
+    <!-- target 속성의 값으로 _blank로 설정되어 있을 경우에는 rel 속성의 값으로 noopener noreferrer 를 지정해야함 -->
     <a href="https://github.com/Littlestar0508" target="_blank">
-      짝은별님의 Github
+      <p>짝은별님의 Github</p>
     </a>
 
-    <br />
+    <!-- a태그 안에 또 다른 a태그를 넣는 것은 오류 발생 -->
+
+    <p>
+      <a href="https://github.com/Littlestar0508/homework"
+        >과제 저장소 -
+        <a
+          href="https://github.com/Littlestar0508/homework/blob/main/about-me.md"
+          >자기소개</a
+        ></a
+      >
+    </p>
 
     <!-- target 속성에서 _를 제거 하면 탭 하나에서 모두 해결해버린다 -->
-    <a href="https://www.naver.com/" target="_blank" title="네이버로 이동"
+
+    <a
+      href="https://www.naver.com/"
+      target="_blank"
+      title="네이버로 이동"
+      rel="noopener noreferrer"
       >네이버</a
     ><br />
-    <a href="https://www.daum.net/" target="_blank" title="다음으로 이동"
+    <a
+      href="https://www.daum.net/"
+      target="_blank"
+      title="다음으로 이동"
+      rel="noopener noreferrer"
       >다음</a
     ><br />
     <!-- 이미지 링크 -->
@@ -42,8 +63,8 @@
 
     <!-- 파일 다운로드 링크 -->
     <a
-      href="../assets/pdf/search-engine-optimization-starter-guide.pdf"
-      download="search-engine-optimization-starter-guide.pdf"
+      href="../assets/pdf/google-seo-guide-en.pdf"
+      download="google-seo-guide-en.pdf"
       >구글 SEO 가이드</a
     >
     <br />
