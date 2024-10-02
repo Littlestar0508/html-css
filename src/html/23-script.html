@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>script 요소 | Techit</title>
+    <style>
+      body {
+        margin: 50px;
+      }
+
+      .flip-button {
+        background-color: #485fc7;
+        border-color: transparent;
+        color: #fff;
+        border-width: 1px;
+        border-radius: 8px;
+        cursor: pointer;
+        justify-content: center;
+        padding: 16px;
+        text-align: center;
+        white-space: nowrap;
+        font-weight: 700;
+      }
+
+      .card-wrapper {
+        width: 750px;
+        height: 400px;
+        margin: 40px 0;
+        perspective: 600px;
+      }
+
+      .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transform-origin: center right;
+        transition: transform 1s;
+      }
+
+      .card.is-flipped {
+        transform: translateX(-100%) rotateY(-180deg);
+      }
+
+      .card-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .card-face-black {
+        border: 2px solid #000;
+        background: url("../assets/thumbnail/likelion-black.png");
+      }
+
+      .card-face-white {
+        border: 2px solid #aaa;
+        background: url("../assets/thumbnail/likelion-white.png");
+        transform: rotateY(180deg);
+      }
+    </style>
+    <script src="../js/card.js" defer></script>
+    <!-- javascript를 지원하지 않을때 안내 문구 등장 -->
+    <noscript>
+      <p>Javascript를 지원하지 않은 환경에서는 서비스를 이용할 수 없습니다.</p>
+    </noscript>
+  </head>
+  <body>
+    <a href="../../index.html">처음으로</a>
+    <h1>script 요소</h1>
+    <button type="button" class="flip-button">카드 뒤집기</button>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-face card-face-black"></div>
+        <div class="card-face card-face-white"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- html을 parsing 중에 script를 만나면 그에 해당하는 js파일을 다운로드 받는다
+  그러면 그 아래에 있는 요소들은 dom tree로 구상할 수 없어진다 따라서 defer요소가 없어지면
+  정상적으로 작동하지 않는 것이다 하지만 script부분을 코드의 맨 아래로 보내면 앞에서 말한
+  행위들을 가장 마지막에 하니까 정상적으로 작동하는 것이다
+  그렇다면 defer 속성은 무엇일까?(async) 이는 resource를 다운로드 받는 도중
+  dom tree를 구성하게 도와준다
+  async도 역시 마찬가지지만 asnyc는 비동기적으로 작동한다
+  또한 script 태그에 type="module" 을 지정해도 해결할 수 있다 -->
