@@ -106,3 +106,13 @@ h6 span {
   color: red;
 }
 /* is를 없애면 where에 해당하는 스타일이 보임 */
+
+h6:has(+ p) {
+  border: solid 1px green;
+  padding: 10px;
+}
+
+p:has(strong) {
+  border: solid 1px red;
+  padding: 10px;
+}
