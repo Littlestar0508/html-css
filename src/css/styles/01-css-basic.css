@@ -1,0 +1,8 @@
+/* 본문 영역을 선택한 후 글자 크기와 글자 색상을 지정 */
+/* serif 계열은 궁서체 계열 */
+body {
+  font-size: 1rem;
+  color: green;
+  font-family: "Noto Serif", serif;
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
