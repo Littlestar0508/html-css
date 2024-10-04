@@ -1,0 +1,56 @@
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 20px;
+  border: solid 10px green;
+  padding: 50px;
+  color: darkblue;
+}
+
+/* layer보다 그냥 선언하는게 우선 순위가 높다 */
+
+p {
+  color: silver;
+}
+
+/* @layer에서 가장 마지막에 호출된 스타일이 적용된다 */
+@layer techit,likelion;
+
+@layer likelion {
+  p {
+    color: red;
+  }
+}
+
+@layer techit {
+  p {
+    color: green !important;
+  }
+}
+
+@layer likelion {
+  h2 {
+    background-color: yellow;
+  }
+}
+
+@layer techit {
+  h2 {
+    background-color: tomato;
+  }
+}
+
+/* h1 {
+  color: green;
+}
+
+p {
+  color: orange;
+}
+
+#school.likelion {
+  color: gray;
+}
+
+#school {
+  color: red;
+} */
