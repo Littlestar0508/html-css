@@ -1,0 +1,49 @@
+.container div {
+  height: 100px;
+  block-size: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.container {
+  border: 1px solid currentColor;
+  display: flow-root;
+  /* overflow: hidden; */
+}
+
+div.box1 {
+  width: 100px;
+  inline-size: 100px;
+  background-color: sandybrown;
+  float: left;
+}
+div.box2 {
+  background-color: skyblue;
+  height: auto;
+  block-size: auto;
+  line-height: 1;
+  text-align: left;
+}
+div.box3 {
+  background-color: lightgreen;
+  /* clear는 margin을 강제로 주어 겹치지 않게 보이게 하는 것 */
+  clear: both;
+  /* margin 병합이 일어나는 것으로 설명 가능 */
+  /* margin-top: 20px;
+  margin-block-start: 20px; */
+  width: 200px;
+  inline-size: 200px;
+  /* float처리가 일어나는 순간 clear로 일어난 margin과 margin으로 준 margin은 병합되지 않음 */
+  float: right;
+}
+div.box4 {
+  width: 300px;
+  inline-size: 300px;
+  float: right;
+  background-color: yellow;
+  position: relative;
+  top: 50px;
+}
+
+/* float은 떠 있기 때문에 container 스타일에 적용되지 않는다 
+        -> display: flow-root 사용*/
