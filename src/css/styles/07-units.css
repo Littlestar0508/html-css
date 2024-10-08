@@ -1,0 +1,62 @@
+@import "../../common/normalize.css";
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+/* 픽셀(px)를 fix해서 설정하는 것에는 환경에 대한 영향이 있음(일정하지 않음) */
+.unit-px {
+  font-size: 20px;
+}
+
+/* em단위는 상속에 대한 문제점이 있음 */
+.unit-em-wrapper {
+  font-size: 1.5em;
+}
+
+.unit-em {
+  font-size: 1.5em;
+}
+/* 위와 같은 경우 unit-em-wrapper는 16*1.5 = 24px이, unit-em은 24*1.5=36px이 된다 */
+
+.unit-rem-wrapper {
+  font-size: 1.5em;
+}
+.unit-rem {
+  font-size: 0.75rem;
+}
+/* rem 단위의 경우 HTML을 기준으로 하므로 상속의 문제점이 발생하지 않음*/
+
+.unit-percentage-wrapper {
+  font-size: 1.5em;
+}
+.unit-percentage {
+  font-size: 150%;
+}
+/* 16*1.5=24 / 24*1.5(150%)=36px로 나타남(em과 비슷) */
+
+.unit-vw {
+  font-size: 3vw;
+}
+/* 나타나는 디스플레이의 3퍼센트만큼 차지하도록 조절 */
+
+/* CSS 색상 지정 */
+.unit-color-name {
+  color: darkgreen;
+}
+
+.unit-color-hex {
+  color: #ff0000;
+  background-color: #00f;
+}
+
+.unit-color-rgb {
+  color: rgb(0, 255, 0);
+  background-color: rgb(255 255 0);
+  /* rgb방식은 , 없이 사용 가능 */
+}
+
+.unit-color-hsl {
+  color: hsl(310, 50%, 50%);
+  background-color: hsla(110 50% 20% / 0.5);
+}
