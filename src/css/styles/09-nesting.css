@@ -1,0 +1,48 @@
+@import "../../common/normalize.css";
+
+.member {
+  background-color: yellowgreen;
+
+  .member__list {
+    list-style: "";
+
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-block: 10px;
+    }
+  }
+  /* & 는 사용하지 않아도 된다 */
+  .member__item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-block: 20px;
+  }
+
+  .member__link {
+    text-decoration: none;
+    color: #181818;
+
+    /* a안에 있는 객체에 표현하는 방식으로 &:명령어 로 동작을 줄 수 있다 */
+    /* a CSS 스타일 지정 밖에 a:명령어 로 작성한 코드와 동일하게 동작한다 */
+    &:hover,
+    &:focus {
+      color: white;
+      text-decoration: underline;
+      border: 1px solid white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/* SaSS */
+
+.likelion {
+  &__list {
+    background-color: lightgreen;
+  }
+}
+/* 이는 Sass 방식이므로 CSS에서 작동하지 않음 */
