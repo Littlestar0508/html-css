@@ -1,0 +1,47 @@
+@import "../../common/normalize.css";
+
+body {
+  margin: 50px;
+  color: white;
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  background-color: darkcyan;
+  background-image: url(../../assets/images/rabbit.png);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-block-size: 100vh;
+  background-position: 100% 100%;
+  background-attachment: fixed;
+  /* background-size:cover는 가로를  contain은 세로를 viewport에 맞춘다*/
+  background-size: 100px 100px;
+}
+
+.bg-origin {
+  width: 800px;
+  inline-size: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  background: pink url("../../assets/thumbnail/meeting-room.jpg") border-box no-repeat 20px 20px /
+    cover;
+  /* background-color: pink;
+  background-image: url("../../assets/thumbnail/meeting-room.jpg");
+  background-origin: border-box;의 단축 표기법이다
+  background-repeat:no-repeat;
+  background-position:20px 20px;
+  background-size:cover;
+  */
+  padding: 20px;
+  border: 20px solid hsl(350, 50%, 50%, 0.2);
+}
+
+.bg-text-gradient {
+  font-weight: 900;
+  font-size: 3.5rem;
+  background-color: lightslategray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-block: 20px;
+  background-image: linear-gradient(blue, purple, white);
+  background-clip: text;
+  color: transparent;
+}
