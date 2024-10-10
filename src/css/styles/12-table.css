@@ -1,0 +1,83 @@
+@import "../../common/modern-reset.css";
+
+/* 만약 html의 기본 글자 크기가 16px이라 계산하기 힘들다면
+   똑같이 rem을 이용하여 10px을 기본 크기로 변경해서 계산 
+   하지만 성능 이슈 발생 가능성 고민*/
+/* html {
+  font-size: 0.625rem;
+} */
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 50px;
+}
+
+/* p {
+  font-size: 2rem;
+} */
+
+.table-wrapper {
+  height: 625px;
+  block-size: 625px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.table-styling {
+  position: relative;
+  /* 성능은 fixed가 auto보다 낫다 */
+  /* 첫번째 열만 계산해서 나머지도 동일 크기로 처리 */
+  table-layout: fixed;
+  border: 1px solid currentColor;
+  /* border-collapse를 사용해 바깥과 안의 나눠진 공간을 합친다 */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* border-spacing은 1px과 1px을 합치면 2px이 된다
+     border-collapse는 1p과 1px을 합치면 1px이 된다 */
+  width: 100%;
+  inline-size: 100%;
+
+  th {
+    background-color: sandybrown;
+  }
+
+  /* table-layout:fixed가 없어도 동일하게 작동함 */
+  .number {
+    width: 10%;
+    inline-size: 10%;
+  }
+  .name {
+    width: 20%;
+    inline-size: 20%;
+  }
+  .email {
+    width: 40%;
+    inline-size: 40%;
+  }
+  .phone {
+    width: 30%;
+    inline-size: 30%;
+  }
+
+  thead,
+  th,
+  td {
+    border: 1px solid currentColor;
+    padding: 1em;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: silver;
+  }
+
+  thead {
+    /* border-collapse 속성때문에 위 쪽에 비어있는 부분이 보인다 */
+    position: sticky;
+    top: 0;
+    inset-block-start: 0;
+  }
+
+  tbody tr {
+    scroll-snap-align: start;
+  }
+}
