@@ -24,7 +24,6 @@ body {
 }
 
 .table-styling {
-  position: relative;
   /* 성능은 fixed가 auto보다 낫다 */
   /* 첫번째 열만 계산해서 나머지도 동일 크기로 처리 */
   table-layout: fixed;

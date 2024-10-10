@@ -1,0 +1,55 @@
+@import "../../common/normalize.css";
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.table-wrapper {
+  table-layout: fixed;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+}
+
+.ediya-news {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  border-block: 2px solid #24388d;
+  color: #24388d;
+
+  tr,
+  td {
+    border-block-start: 1px solid #919bc6;
+    font-size: 0.75rem;
+    font-weight: 700;
+    float: inline;
+  }
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+figure {
+  height: 60px;
+  display: flex;
+  font-weight: 500;
+  strong {
+    color: #24388d;
+    margin: 5px;
+    font-size: 1rem;
+  }
+  p {
+    color: #878787;
+    margin: 5px;
+    font-size: 0.75rem;
+  }
+}
