@@ -39,17 +39,22 @@ body {
 }
 
 figure {
-  height: 60px;
   display: flex;
   font-weight: 500;
+  line-height: 1.5;
   strong {
     color: #24388d;
-    margin: 5px;
+    margin-left: 10px;
+    margin-inline-start: 10px;
     font-size: 1rem;
   }
   p {
     color: #878787;
-    margin: 5px;
+    margin-left: 10px;
+    margin-inline-start: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-block: 5px;
     font-size: 0.75rem;
   }
 }
