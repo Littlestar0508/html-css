@@ -59,10 +59,12 @@ body {
     inline-size: 30%;
   }
 
+  tbody,
   thead,
+  tr,
   th,
   td {
-    border: 1px solid currentColor;
+    border: inherit;
     padding: 1em;
   }
 
