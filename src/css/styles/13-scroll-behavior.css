@@ -2,6 +2,9 @@
 
 .scroll-wrapper {
   scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+  block-size: 100vh;
 }
 
 section {
