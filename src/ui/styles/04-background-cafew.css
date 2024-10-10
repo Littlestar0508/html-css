@@ -1,0 +1,83 @@
+@import "../../common/best-reset.css";
+@import "../../common/a11y.css";
+@import "../../common/base.css";
+
+.cafew-thumbnail1 {
+  position: absolute;
+  inset-inline-start: 120px;
+  inset-block-start: 287px;
+  width: 692px;
+  height: 692px;
+  text-decoration-color: white;
+  text-decoration-thickness: 8px;
+  text-underline-offset: 40px;
+  z-index: 1;
+
+  .imgbox {
+    width: 692px;
+    height: 692px;
+    background-image: url("../../assets/cafew/coffee-lab-01-@2x.jpg");
+    text-align: center;
+    padding-top: 497px;
+    padding-block-start: 497px;
+    color: #fffcf9;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 3.2px;
+  }
+}
+
+.cafew-thumbnail2 {
+  position: absolute;
+  inset-inline-start: 628px;
+  inset-block-start: 420px;
+  z-index: 0;
+  width: 692px;
+  height: 692px;
+  text-decoration-color: white;
+  text-decoration-thickness: 8px;
+  text-underline-offset: 40px;
+
+  .imgbox {
+    width: 692px;
+    height: 692px;
+    background-image: url("../../assets/cafew/coffee-lab-02-@1x.jpg");
+    text-align: center;
+    padding-top: 497px;
+    padding-block-start: 497px;
+    color: #fffcf9;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 3.2px;
+  }
+}
+
+.cafew-container {
+  position: relative;
+}
+
+.coffee-lab {
+  letter-spacing: 3.2px;
+  font-size: 3rem;
+  text-align: center;
+
+  h2 {
+    line-height: 1.4;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+.line {
+  border: 1px solid #7d6f5d;
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  margin-top: 55px;
+  margin-block-start: 55px;
+}
