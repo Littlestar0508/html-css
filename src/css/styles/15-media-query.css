@@ -1,0 +1,44 @@
+@import "../../common/mini-reset.css";
+@import "../../common/base.css";
+
+body {
+  margin: 50px;
+}
+
+.box-border {
+  border: 1px border currentColor;
+}
+
+.rwd-img {
+  width: 20%;
+  inline-size: 20%;
+}
+
+.float-wrapper {
+  background-color: midnightblue;
+  color: white;
+  border: 1px solid currentColor;
+  display: flow-root;
+
+  div {
+    float: inline-start;
+    width: 10%;
+    inline-size: 10%;
+    aspect-ratio: 16/9;
+  }
+}
+
+/* 미디어 쿼리 */
+/* 공통 스타일 */
+body {
+  background-color: #76abae;
+
+  /* 모바일 디바이스(320px 부터 480px까지 스타일) */
+  @media (min-width: 320px) and (max-width: 480px) {
+    background-color: lightcoral;
+  }
+
+  @media (min-width: 480px) and (max-width: 768px) {
+    background-color: aqua;
+  }
+}
