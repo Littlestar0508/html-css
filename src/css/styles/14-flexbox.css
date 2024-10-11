@@ -48,7 +48,7 @@ h2 {
 
 .flex-item1 {
   flex-grow: 1;
-  flex-shrink: 2;
+  flex-shrink: 1;
   background-color: lightgreen;
 }
 .flex-item2 {
