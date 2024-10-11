@@ -2,6 +2,7 @@
 
 body {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 50px 50px 200px 50px;
 }
 
 /* 픽셀(px)를 fix해서 설정하는 것에는 환경에 대한 영향이 있음(일정하지 않음) */
@@ -59,4 +60,17 @@ body {
 .unit-color-hsl {
   color: hsl(310, 50%, 50%);
   background-color: hsla(110 50% 20% / 0.5);
+}
+
+.unit-number {
+  font-size: 10px;
+  /* 이 상황에서는 line-height가 10px이 된다 */
+  /* line-height: 100%; 
+  line-height: 1em; */
+  /* line-height:1이 되면 20px로 변한다 */
+  line-height: 1;
+
+  p {
+    font-size: 20px;
+  }
 }
