@@ -2,10 +2,31 @@
 @import "../../common/base.css";
 
 :root {
+  /* 색상 */
   --dark-gray: #333333;
   --white: #fff;
   --gray: #999;
   --green: #03cf5d;
+  --silver: #dadada;
+
+  /* 크기(박스) */
+  --size-sm: 0.75rem;
+  --size-base: 1rem;
+  --size-md: 1.25rem;
+  --size-lg: 1.5rem;
+
+  /* 글자 크기 */
+  --text-sm: 0.75rem;
+  --text-base: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+}
+
+/* 기본 박스 사이징 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* 임시적인 스타일 */
@@ -17,7 +38,6 @@ body {
 .brand {
   font-size: 1em;
   margin: 0;
-  background-color: yellow;
 
   a,
   svg,
@@ -36,10 +56,21 @@ body {
 
 /* 체크박스 컴포넌트(checkbox) */
 .checkbox {
-  background-color: lightsalmon;
+  position: relative;
+
+  .checkbox__input {
+    --icon-size: var(--size-lg, 1.5rem);
+
+    position: absolute;
+    margin: 0;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: var(--icon-size);
+    aspect-ratio: 1/1;
+    appearance: none;
+  }
 
   .checkbox__label {
-    background-color: lightblue;
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -64,5 +95,36 @@ body {
 
   .checkbox__input:checked + .checkbox__label .checkbox--mark {
     fill: var(--white, #fff);
+  }
+}
+
+/* 입력 서실 컴포넌트(input) : 숨김 레이블 유형 */
+.input {
+  --border-color: var(--silver, #dadada);
+  --text-color: var(--dark-gray, #333);
+  --text-size: var(--text-base, 0.875rem);
+
+  color: var(--text-color);
+  font-size: var(--text-size);
+
+  .input__input {
+    border: 1px solid var(--border-color);
+    inline-size: 100%;
+    block-size: 3rem;
+    padding: 0.875rem;
+
+    &:user-invalid + .input__error-message span {
+      visibility: visible;
+    }
+  }
+
+  .input__error-message {
+    color: #ff1414;
+    font-size: 0.75rem;
+    margin: 0.5rem 0 0 0;
+
+    span {
+      visibility: hidden;
+    }
   }
 }
