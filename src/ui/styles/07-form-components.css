@@ -1,15 +1,16 @@
-@import "../../common/a11y.css";
-@import "../../common/base.css";
+@import "./../../common/base.css";
+@import "./../../common/a11y.css";
 
 :root {
-  /* 색상 */
-  --dark-gray: #333333;
+  /*  색상 */
+  --dark-gray: #333;
   --white: #fff;
   --gray: #999;
   --green: #03cf5d;
   --silver: #dadada;
+  --black: #121212;
 
-  /* 크기(박스) */
+  /* 아이콘 크기 */
   --size-sm: 0.75rem;
   --size-base: 1rem;
   --size-md: 1.25rem;
@@ -29,15 +30,15 @@
   box-sizing: border-box;
 }
 
-/* 임시적인 스타일 */
+/* body 기본 스타일 */
 body {
-  margin: 50px;
+  color: var(--black);
 }
 
 /* 로고 컴포넌트 */
 .brand {
-  font-size: 1em;
   margin: 0;
+  font-size: 1em;
 
   a,
   svg,
@@ -46,15 +47,15 @@ body {
   }
 }
 
-/* 링크 컴포넌트(target="_blank") */
+/* 링크 컴포넌트 (target="_blank") */
 .anchor--blank {
-  --text-color: var(--dark-gray, #333333);
+  --text-color: var(--dark-gray, #333);
 
   text-decoration: none;
   color: var(--text-color);
 }
 
-/* 체크박스 컴포넌트(checkbox) */
+/* 체크박스 컴포넌트 (checkbox) */
 .checkbox {
   position: relative;
 
@@ -62,9 +63,9 @@ body {
     --icon-size: var(--size-lg, 1.5rem);
 
     position: absolute;
-    margin: 0;
     inset-inline-start: 0;
     inset-block-start: 0;
+    margin: 0;
     inline-size: var(--icon-size);
     aspect-ratio: 1/1;
     appearance: none;
@@ -98,13 +99,12 @@ body {
   }
 }
 
-/* 입력 서실 컴포넌트(input) : 숨김 레이블 유형 */
+/* 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 */
 .input {
   --border-color: var(--silver, #dadada);
   --text-color: var(--dark-gray, #333);
   --text-size: var(--text-base, 0.875rem);
 
-  color: var(--text-color);
   font-size: var(--text-size);
 
   .input__input {
@@ -115,6 +115,11 @@ body {
 
     &:user-invalid + .input__error-message span {
       visibility: visible;
+    }
+
+    &:focus {
+      border: 1px solid var(--green);
+      background-color: #e9f0fd;
     }
   }
 
@@ -129,6 +134,7 @@ body {
   }
 }
 
+/* 스위치 컴포넌트 (checkbox) */
 .switch {
   position: relative;
   font-size: 0.875rem;
@@ -136,9 +142,9 @@ body {
 
   .switch__input {
     position: absolute;
-    margin: 0;
     inset-inline-start: 0;
     inset-block-start: 0;
+    margin: 0;
     inline-size: 2em;
     block-size: 1rem;
     appearance: none;
@@ -158,4 +164,13 @@ body {
     content: "ON";
     color: var(--green);
   }
+}
+
+/* 버튼 컴포넌트 */
+.button--primary {
+  background-color: var(--green);
+  color: var(--white);
+  block-size: 3.5rem;
+  padding: 1rem;
+  border: 0;
 }
