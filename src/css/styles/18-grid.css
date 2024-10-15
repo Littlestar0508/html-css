@@ -1,0 +1,149 @@
+@import "../../common/base.css";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px;
+}
+
+/* CSS 함수 */
+/* minmax(최소값, 최대값) - 최소값과 최대값을 설정 */
+/* repeat(반복 횟수 , 반복할 값) - 같은 값을 반복해서 사용해줌 */
+
+/* 그리드 영역 이름 */
+.grid-box {
+  min-inline-size: 1122px;
+  border: 1px solid green;
+  display: grid;
+  /* grid-auto-flow: column; */
+  /* grid-auto-columns: minmax(74px, 1fr); */
+  padding-inline: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    "item1 item1 item1 item2 item2"
+    "item3 item3 item4 item4 item4"
+    "item5 item5 item5 item5 item5";
+
+  .grid-item {
+    padding: 0.5rem;
+  }
+
+  .grid-item1 {
+    background-color: gold;
+    grid-area: item1;
+  }
+
+  .grid-item2 {
+    background-color: lightcoral;
+    grid-area: item2;
+  }
+
+  .grid-item3 {
+    background-color: darkkhaki;
+    grid-area: item3;
+  }
+
+  .grid-item4 {
+    background-color: lightskyblue;
+    grid-area: item4;
+  }
+
+  .grid-item5 {
+    background-color: grey;
+    grid-area: item5;
+  }
+}
+
+/* 그리드 라인 이름 */
+.grid-wrapper {
+  min-inline-size: 1122px;
+  border: 1px solid green;
+  display: grid;
+  /* grid-auto-flow: column; */
+  /* grid-auto-columns: minmax(74px, 1fr); */
+  padding-inline: 20px;
+  gap: 20px;
+  grid-template-columns: [techit-start]1fr [likelion-start]1fr [euid-start]1fr 1fr [likelion-end euid-end] 1fr[techit-end];
+  grid-template-rows: repeat(5, 50px);
+
+  .grid-item {
+    padding: 0.5rem;
+  }
+
+  .grid-item1 {
+    background-color: gold;
+    grid-column: techit;
+  }
+
+  .grid-item2 {
+    background-color: lightcoral;
+    grid-column: likelion;
+  }
+
+  .grid-item3 {
+    background-color: darkkhaki;
+    grid-column: euid;
+  }
+
+  .grid-item4 {
+    background-color: lightskyblue;
+  }
+
+  .grid-item5 {
+    background-color: grey;
+  }
+}
+
+.grid-container {
+  min-inline-size: 1122px;
+  border: 1px solid green;
+  display: grid;
+  /* grid-auto-flow: column; */
+  /* grid-auto-columns: minmax(74px, 1fr); */
+  padding-inline: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  grid-template-rows: repeat(5, 50px);
+
+  .grid-item {
+    border: 1px solid red;
+    padding: 0.5rem;
+  }
+
+  .grid-item1 {
+    background-color: gold;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;
+  }
+
+  .grid-item2 {
+    background-color: lightcoral;
+    grid-row: 3/ 5;
+    grid-column: 4/ 6;
+  }
+
+  .grid-item3 {
+    background-color: darkkhaki;
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .grid-item4 {
+    background-color: lightskyblue;
+    grid-row: 5;
+    grid-column: 1/-1;
+  }
+
+  .grid-item5 {
+    background-color: grey;
+    grid-area: 3/ 2 / span 3 / span 2;
+  }
+}
