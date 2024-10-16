@@ -46,6 +46,16 @@ h2 {
 }
 
 /* CSS 애니메이션 */
+@keyframes fadeEffect {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .fade-box {
   inline-size: 200px;
   block-size: 200px;
@@ -53,4 +63,26 @@ h2 {
   background-color: gray;
   text-align: center;
   align-content: center;
+  margin-block: 1rem;
+
+  @media (prefers-redueced-motion) {
+    animation-play-state: paused;
+  }
+
+  &.is--animation {
+    /* animation-name: fadeEffect;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running; */
+
+    /* animation 이름하고 시간은 반드시 있어야 함 단축 표기법 */
+    animation: fadeEffect 4s forwards infinite alternate ease-in-out running;
+
+    &.fade-box2 {
+      animation-delay: 2s;
+    }
+  }
 }
